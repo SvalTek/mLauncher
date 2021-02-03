@@ -7,7 +7,7 @@ Quickly Join your favorite servers.
 define your favorite servers in the config . and quickly  direct connect to them
 optionally supports both experimental and community servers, with the option to delete all mods on startup.
 
-get the latest release from the releases section or build yourself using [luvi](https://github.com/luvit/luvi)
+get the latest release from the [releases](https://github.com/SvalTek/mLauncher/releases) section or build yourself using [luvi](https://github.com/luvit/luvi)
 
 
 
