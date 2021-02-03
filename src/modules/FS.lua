@@ -91,4 +91,25 @@ function FS.joinPath(...)
     return r
 end
 
+--- normalises a path based on provided seperator when not specified uses platform defined, `_G['package'].config:sub(1, 1)`
+function FS.translate(p, sep)
+    if (type(p) == "table") then
+        local result = { }
+        for _, value in ipairs(p) do
+            table.insert(result, FS.translate(value))
+        end
+        return result
+    else
+        if (not sep) then
+            if (DIR_SEPERATOR == "\\") then
+                sep = "\\"
+            else
+                sep = "/"
+            end
+        end
+        local result = p:gsub("[/\\]", sep)
+        return result
+    end
+end
+
 return FS

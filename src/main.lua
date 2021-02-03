@@ -53,14 +53,16 @@ local function launchGame(server)
     local data = Application.data
     local mods_path
     if server.experimental then
-        mods_path = FS.joinPath(getModsPath("experimental"),"mods")
+        mods_path = FS.joinPath(getModsPath("experimental"),"Mods")
     else
-        mods_path = FS.joinPath(getModsPath("normal"),"mods")
+        mods_path = FS.joinPath(getModsPath("normal"),"Mods")
     end
     if data.settings['purge_mods'] then
-        local delete_path = mods_path:gsub("/",[[\]])
+        local delete_path = FS.translate(mods_path)
         print(string.format("Purging mods in: %q",delete_path))
-        uv.fs_rmdir(delete_path)
+        local delete_cmd = string.format("rmdir /S /Q %q",delete_path)
+        print(" > executing: ",delete_cmd)
+        os.execute(delete_cmd)
     end
 
     --- setup launch command
