@@ -1,0 +1,3 @@
+@ECHO OFF
+ECHO Building....
+luvi ./src -o mLauncher.exe

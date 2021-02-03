@@ -1,0 +1,16 @@
+{
+    "settings": {
+    	// Should we Purge Mods on every launch,	(fixes failed to download mods on community servers)
+        "purge_mods": true,
+        // path where miscreated is installed,	(allways use \\ instead of \)
+        "miscreated_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Miscreated",
+        // path where miscreated experimental is installed,	(allways use \\ instead of \)
+        // leave blank if not installed
+        "miscreatedexp_path":"C:\\Program Files (x86)\\Steam\\steamapps\\common\\Miscreated Experimental Server"
+    },
+    "servers": [
+    	// define servers here: you can remove the local server if not needed
+    	// we support experimental release add "experimental":true to define exp servers
+        {"name":"local","hostname":"127.0.0.1","port":"64090"},
+    ]
+}
