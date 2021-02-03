@@ -14,3 +14,4 @@ get the latest release from the releases section or build yourself using [luvi](
 just place the `mLauncher.exe` and `settings.json` somwhere together, and create a desktop shortcut.
 
 edit `settings.json` to define program settings and favorite servers.
+NOTE: comments in settings file are there to show how things works... mLauncher will fail to run unless you remove all comments from setings.json
